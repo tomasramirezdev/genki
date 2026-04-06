@@ -83,14 +83,18 @@ export default function Contact() {
 
             <div className="space-y-6">
               {[
-                { label: "Ubicación", value: "Córdoba Capital, Argentina" },
-                { label: "Teléfono", value: "+54 351 000-0000" },
-                { label: "Email", value: "info@genki.com.ar" },
-                { label: "Horario", value: "Lun – Vie: 8:00 a 18:00" },
+                { label: "Ubicación", value: "Córdoba Capital, Argentina", href: null },
+                { label: "Teléfono", value: "+54 351 000-0000", href: "tel:+543510000000" },
+                { label: "Email", value: "info@genki.com.ar", href: "mailto:info@genki.com.ar" },
+                { label: "Horario", value: "Lun – Vie: 8:00 a 18:00", href: null },
               ].map((item) => (
                 <div key={item.label} className="flex flex-col gap-0.5">
                   <span className="text-white/30 text-xs tracking-widest uppercase">{item.label}</span>
-                  <span className="text-white text-sm">{item.value}</span>
+                  {item.href ? (
+                    <a href={item.href} className="text-white text-sm hover:text-white/70 transition-colors">{item.value}</a>
+                  ) : (
+                    <span className="text-white text-sm">{item.value}</span>
+                  )}
                 </div>
               ))}
             </div>

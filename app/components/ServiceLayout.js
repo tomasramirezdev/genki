@@ -48,14 +48,18 @@ function ServiceContactForm({ serviceLabel }) {
             </p>
             <div className="space-y-5">
               {[
-                { label: "Teléfono",   value: "+54 351 000-0000" },
-                { label: "Email",      value: "info@genki.com.ar" },
-                { label: "Horario",    value: "Lun – Vie: 8:00 a 18:00" },
-                { label: "Ubicación",  value: "Córdoba Capital, Argentina" },
+                { label: "Teléfono",   value: "+54 351 000-0000", href: "tel:+543510000000" },
+                { label: "Email",      value: "info@genki.com.ar", href: "mailto:info@genki.com.ar" },
+                { label: "Horario",    value: "Lun – Vie: 8:00 a 18:00", href: null },
+                { label: "Ubicación",  value: "Córdoba Capital, Argentina", href: null },
               ].map((item) => (
                 <div key={item.label}>
                   <span className="text-white/25 text-xs tracking-widest uppercase">{item.label}</span>
-                  <p className="text-white text-sm mt-0.5">{item.value}</p>
+                  {item.href ? (
+                    <a href={item.href} className="block text-white text-sm mt-0.5 hover:text-white/70 transition-colors">{item.value}</a>
+                  ) : (
+                    <p className="text-white text-sm mt-0.5">{item.value}</p>
+                  )}
                 </div>
               ))}
             </div>

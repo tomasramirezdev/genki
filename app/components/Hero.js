@@ -73,7 +73,7 @@ export default function Hero() {
         muted
         autoPlay
         playsInline
-        preload="auto"
+        preload="metadata"
         className="absolute inset-0 w-full h-full object-cover object-center"
         style={{ opacity: 0 }}
       />
@@ -90,7 +90,7 @@ export default function Hero() {
       {/* Hero content */}
       <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-6 py-12 text-center -translate-y-[8%]">
         <h1
-          className="text-7xl md:text-8xl lg:text-[10rem] text-white tracking-tight whitespace-nowrap leading-none mb-8"
+          className="text-5xl sm:text-7xl md:text-8xl lg:text-[10rem] text-white tracking-tight leading-none mb-8"
           style={{ fontFamily: "'Instrument Serif', serif" }}
         >
           Energía <em className="italic text-white/80">solar.</em>

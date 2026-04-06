@@ -144,7 +144,7 @@ export default function Navbar() {
             Cotizá Gratis
           </a>
           <button
-            className="md:hidden text-white p-1"
+            className="md:hidden text-white p-2"
             onClick={() => setMobileOpen((v) => !v)}
           >
             {mobileOpen ? <X size={20} /> : <Menu size={20} />}

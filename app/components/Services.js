@@ -72,11 +72,6 @@ export default function Services() {
                     {["☀", "⚡", "📡", "🔍"][i]}
                   </div>
                 </div>
-                <div className="absolute inset-0 grid grid-cols-8 grid-rows-5 gap-px p-4 opacity-10 group-hover:opacity-25 transition-opacity duration-500">
-                  {Array.from({ length: 40 }).map((_, j) => (
-                    <div key={j} className="bg-white/50 rounded-sm" />
-                  ))}
-                </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
               </div>
 

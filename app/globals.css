@@ -59,6 +59,7 @@ html { scroll-behavior: smooth; }
     rgba(116, 172, 223, 0.02) 360deg
   );
   animation: spin-border 12s linear infinite;
+  will-change: transform;
   z-index: 0;
   pointer-events: none;
 }

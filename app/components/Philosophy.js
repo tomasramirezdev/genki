@@ -1,6 +1,7 @@
 "use client";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import Image from "next/image";
 
 export default function Philosophy() {
   const ref = useRef(null);
@@ -25,12 +26,15 @@ export default function Philosophy() {
           <motion.div
             animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -40 }}
             transition={{ duration: 0.9, delay: 0.2 }}
-            className="rounded-3xl overflow-hidden aspect-[4/3]"
+            className="rounded-3xl overflow-hidden aspect-[4/3] relative"
           >
-            <img
+            <Image
               src="/instalacion.jpg"
               alt="Instalación de paneles solares en Córdoba"
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+              priority={false}
             />
 </motion.div>
 
