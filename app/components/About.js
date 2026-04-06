@@ -7,7 +7,7 @@ export default function About() {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="nosotros" ref={ref} className="bg-black py-28 md:py-40 px-6 overflow-hidden">
+    <section id="nosotros" ref={ref} className="bg-black pt-28 md:pt-40 pb-16 md:pb-20 px-6 overflow-hidden">
       <div className="max-w-6xl mx-auto">
 
         {/* Top row: label + descripción */}

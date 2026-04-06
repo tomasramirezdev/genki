@@ -7,7 +7,7 @@ export default function Philosophy() {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="bg-black py-28 md:py-40 px-6 overflow-hidden">
+    <section ref={ref} className="bg-black pt-16 md:pt-20 pb-28 md:pb-40 px-6 overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <motion.h2
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
