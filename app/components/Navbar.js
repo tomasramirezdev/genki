@@ -140,6 +140,7 @@ export default function Navbar() {
           <a
             href={href("contacto")}
             className="liquid-glass rounded-full px-5 py-2 text-white text-sm font-medium hover:bg-white/5 transition-colors"
+            style={{ backdropFilter: "none", WebkitBackdropFilter: "none" }}
           >
             Cotizá Gratis
           </a>
