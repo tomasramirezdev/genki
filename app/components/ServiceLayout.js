@@ -256,18 +256,21 @@ export default function ServiceLayout({ tag, title, subtitle, description, featu
       {/* Stats */}
       {stats && (
         <section className="px-6 pb-20">
-          <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 border-t border-white/10">
-            {stats.map((s, i) => (
-              <FadeIn key={s.label} delay={i * 0.1}>
-                <div className="py-8 px-6 border-b border-r border-white/10 last:border-r-0">
+          <FadeIn>
+            <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 border-t border-white/10">
+              {stats.map((s, i) => (
+                <div
+                  key={s.label}
+                  className={`py-8 px-6 border-b border-white/10 ${i % 2 === 0 ? "border-r" : ""} md:border-r ${i === stats.length - 1 ? "md:border-r-0" : ""}`}
+                >
                   <div className="text-3xl md:text-4xl text-white mb-1" style={{ fontFamily: "'Instrument Serif', serif" }}>
                     {s.value}
                   </div>
                   <div className="text-white/40 text-xs tracking-wide">{s.label}</div>
                 </div>
-              </FadeIn>
-            ))}
-          </div>
+              ))}
+            </div>
+          </FadeIn>
         </section>
       )}
 
@@ -283,8 +286,8 @@ export default function ServiceLayout({ tag, title, subtitle, description, featu
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {features.map((f, i) => (
-              <FadeIn key={f.title} delay={i * 0.08}>
-                <div className="glass-card rounded-2xl p-6 h-full">
+              <FadeIn key={f.title} delay={i * 0.08} className="h-full">
+                <div className="glass-card rounded-3xl p-6 h-full">
                   <div className="text-2xl mb-4">{f.icon}</div>
                   <h3 className="text-white font-medium mb-2 text-base">{f.title}</h3>
                   <p className="text-white/40 text-sm leading-relaxed">{f.desc}</p>
