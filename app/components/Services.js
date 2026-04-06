@@ -56,17 +56,27 @@ export default function Services() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {services.map((s, i) => (
-            <Link href={s.href} key={s.title}>
+            <Link href={s.href} key={s.title} className="block">
             <motion.div
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{ duration: 0.8, delay: i * 0.15 }}
-              className="glass-card rounded-3xl overflow-hidden group cursor-pointer"
+              className="glass-card rounded-3xl overflow-hidden group cursor-pointer h-full"
             >
               {/* Visual area */}
               <div className="aspect-video relative overflow-hidden bg-white/[0.03]">
+                {/* Solar panel grid — CSS only */}
+                <div
+                  className="absolute inset-0 opacity-[0.07] group-hover:opacity-[0.35] transition-opacity duration-500"
+                  style={{
+                    backgroundColor: "rgba(116,172,223,0.6)",
+                    backgroundImage:
+                      "linear-gradient(#080808 2px, transparent 2px), linear-gradient(90deg, #080808 2px, transparent 2px)",
+                    backgroundSize: "12.5% 20%",
+                  }}
+                />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div
-                    className="text-8xl text-white/10 group-hover:text-white/30 transition-colors duration-500 select-none"
+                    className="text-8xl text-white/10 group-hover:text-white/50 transition-colors duration-500 select-none"
                     style={{ fontFamily: "'Instrument Serif', serif" }}
                   >
                     {["☀", "⚡", "📡", "🔍"][i]}
