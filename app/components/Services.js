@@ -88,8 +88,8 @@ export default function Services() {
               {/* Body */}
               <div className="p-6 md:p-8">
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-white/40 text-xs tracking-widest uppercase">{s.tag}</span>
-                  <div className="liquid-glass rounded-full p-2 text-white/60 group-hover:text-white transition-colors">
+                  <span className="liquid-glass rounded-full inline-block px-3 py-1 text-white/60 text-xs tracking-widest uppercase">{s.tag}</span>
+                  <div className="bg-white/5 backdrop-blur-md shadow-[0_0_0_1px_rgba(255,255,255,0.08)] rounded-full p-2 text-[#CEF657] group-hover:text-black hover:bg-[#CEF657]/20 hover:shadow-[0_0_0_1px_rgba(206,246,87,0.5)] transition-all">
                     <ArrowUpRight size={16} />
                   </div>
                 </div>

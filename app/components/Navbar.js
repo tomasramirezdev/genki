@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { Sun, Menu, X, ChevronDown } from "lucide-react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 
 const serviceItems = [
   { label: "Instalación en Hogares",   href: "/servicios/instalacion-hogares" },
@@ -87,8 +88,7 @@ export default function Navbar() {
         {/* Left */}
         <div className="flex items-center gap-8 relative">
           <Link href="/" className="flex items-center gap-2">
-            <Sun size={20} className="text-[#74acdf]" />
-            <span className="text-white font-semibold text-lg tracking-tight">Genki</span>
+            <Image src="/logoazul.png" alt="Genkidama" width={240} height={70} className="h-12 md:h-14 w-auto" priority />
           </Link>
           <div className="hidden md:flex items-center gap-8">
             {/* Servicios dropdown */}
@@ -139,7 +139,7 @@ export default function Navbar() {
           </a>
           <a
             href={href("contacto")}
-            className="liquid-glass rounded-full px-5 py-2 text-white text-sm font-medium hover:bg-white/5 transition-colors"
+            className="liquid-glass rounded-full px-5 py-2 text-white text-sm font-medium hover:text-white hover:bg-[#0083FE]/20 hover:border-[#0083FE]/50 transition-colors border border-white/10"
             style={{ backdropFilter: "none", WebkitBackdropFilter: "none" }}
           >
             Cotizá Gratis

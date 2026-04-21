@@ -32,7 +32,7 @@ export default function Testimonials() {
         <motion.p
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
-          className="text-white/40 text-sm tracking-widest uppercase mb-6"
+          className="liquid-glass rounded-full inline-block px-3 py-1 text-white/60 text-[10px] tracking-widest uppercase mb-6"
         >
           Testimonios
         </motion.p>
@@ -44,7 +44,7 @@ export default function Testimonials() {
           style={{ fontFamily: "'Instrument Serif', serif" }}
         >
           Lo que dicen{" "}
-          <em className="italic text-white/60">nuestros clientes</em>
+          <em className="italic text-[#0083FE]">nuestros clientes</em>
         </motion.h2>
 
         <motion.div
@@ -72,7 +72,7 @@ export default function Testimonials() {
             <div className="flex items-center gap-3">
               <button
                 onClick={() => setCurrent((c) => (c - 1 + testimonials.length) % testimonials.length)}
-                className="liquid-glass rounded-full p-3 text-white/60 hover:text-white transition-colors"
+                className="liquid-glass rounded-full p-3 text-white/60 hover:text-white hover:bg-[#0083FE]/20 hover:border-[#0083FE]/50 transition-colors"
               >
                 <ArrowRight size={16} className="rotate-180" />
               </button>
@@ -87,7 +87,7 @@ export default function Testimonials() {
               </div>
               <button
                 onClick={() => setCurrent((c) => (c + 1) % testimonials.length)}
-                className="liquid-glass rounded-full p-3 text-white/60 hover:text-white transition-colors"
+                className="liquid-glass rounded-full p-3 text-white/60 hover:text-white hover:bg-[#0083FE]/20 hover:border-[#0083FE]/50 transition-colors"
               >
                 <ArrowRight size={16} />
               </button>

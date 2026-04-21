@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Sun, ArrowRight, Share2, MessageCircle, Globe } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const navLinks = [
   { label: "Inicio",     href: "/" },
@@ -56,7 +57,7 @@ export default function Footer() {
               onChange={(e) => setEmail(e.target.value)}
               className="bg-white/5 border border-white/10 rounded-full px-5 py-3 text-white placeholder:text-white/30 text-sm focus:outline-none focus:border-white/30 transition-colors flex-1 md:w-56"
             />
-            <button type="submit" className="liquid-glass rounded-full p-3 text-white hover:bg-white/5 transition-colors flex-shrink-0">
+            <button type="submit" className="liquid-glass rounded-full p-3 text-white hover:bg-gk-primary hover:border-gk-primary transition-colors flex-shrink-0">
               <ArrowRight size={18} />
             </button>
           </form>
@@ -68,15 +69,14 @@ export default function Footer() {
         {/* Brand */}
         <div className="col-span-2 md:col-span-1">
           <Link href="/" className="flex items-center gap-2 mb-4">
-            <Sun size={20} className="text-[#74acdf]" />
-            <span className="text-white font-semibold text-lg">Genki</span>
+            <Image src="/logoazul.png" alt="Genkidama" width={240} height={70} className="h-12 md:h-14 w-auto" />
           </Link>
           <p className="text-white/30 text-sm leading-relaxed mb-6">
             Instaladores de energía solar en Córdoba, Argentina. Tecnología limpia para un futuro sustentable.
           </p>
           <div className="flex gap-3">
             {[Share2, MessageCircle, Globe].map((Icon, i) => (
-              <a key={i} href="#" className="liquid-glass rounded-full p-3 text-white/60 hover:text-white hover:bg-white/5 transition-all">
+              <a key={i} href="#" className="liquid-glass rounded-full p-3 text-white/60 hover:text-white hover:bg-gk-primary hover:border-gk-primary transition-all">
                 <Icon size={18} />
               </a>
             ))}

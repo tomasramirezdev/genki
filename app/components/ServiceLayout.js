@@ -33,9 +33,9 @@ function ServiceContactForm({ serviceLabel }) {
     <section id="contacto" className="px-6 py-20 bg-black">
       <div className="max-w-6xl mx-auto">
         <FadeIn className="mb-10">
-          <p className="text-white/40 text-sm tracking-widest uppercase mb-3">Contacto</p>
+          <p className="liquid-glass rounded-full inline-block px-3 py-1 text-white/60 text-[10px] tracking-widest uppercase mb-3">Contacto</p>
           <h2 className="text-3xl md:text-5xl text-white tracking-tight" style={{ fontFamily: "'Instrument Serif', serif" }}>
-            Hablemos de tu <em className="italic text-white/50">proyecto</em>
+            Hablemos de tu <em className="italic text-[#0083FE]">proyecto</em>
           </h2>
         </FadeIn>
 
@@ -151,7 +151,7 @@ function ServiceContactForm({ serviceLabel }) {
 
                   <button
                     type="submit"
-                    className="liquid-glass rounded-full px-6 py-3.5 text-white text-sm font-medium flex items-center justify-center gap-2 hover:bg-white/5 transition-colors mt-1"
+                    className="liquid-glass rounded-full px-6 py-3.5 text-white text-sm font-medium flex items-center justify-center gap-2 hover:bg-[#0083FE]/20 hover:border-[#0083FE]/50 transition-colors mt-1"
                   >
                     Enviar consulta
                     <ArrowRight size={16} />
@@ -204,7 +204,7 @@ export default function ServiceLayout({ tag, title, subtitle, description, featu
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-white/40 text-sm tracking-widest uppercase mb-4"
+          className="liquid-glass rounded-full inline-block px-3 py-1 text-white/60 text-[10px] tracking-widest uppercase mb-4"
         >
           {tag}
         </motion.p>
@@ -218,7 +218,7 @@ export default function ServiceLayout({ tag, title, subtitle, description, featu
         >
           {title}
           {subtitle && (
-            <><br /><em className="italic text-white/50">{subtitle}</em></>
+            <><br /><em className="italic text-[#0083FE]">{subtitle}</em></>
           )}
         </motion.h1>
 
@@ -239,14 +239,14 @@ export default function ServiceLayout({ tag, title, subtitle, description, featu
         >
           <a
             href="#contacto"
-            className="inline-flex items-center gap-2 bg-white text-black font-semibold px-6 py-3 rounded-full hover:bg-white/90 transition-colors text-sm"
+            className="inline-flex items-center gap-2 bg-[#0083FE]/20 border border-[#0083FE]/50 text-white font-semibold px-6 py-3 rounded-full hover:bg-[#0083FE] transition-colors text-sm"
           >
             {cta?.primary ?? "Solicitar diagnóstico gratis"}
             <ArrowRight size={16} />
           </a>
           <a
             href={cta?.secondaryHref ?? "/#proyectos"}
-            className="liquid-glass inline-flex items-center gap-2 text-white px-6 py-3 rounded-full hover:bg-white/5 transition-colors text-sm"
+            className="liquid-glass inline-flex items-center gap-2 text-white px-6 py-3 rounded-full hover:bg-[#0083FE]/20 hover:border-[#0083FE]/50 transition-colors text-sm"
           >
             {cta?.secondary ?? "Ver proyectos"}
           </a>
@@ -278,7 +278,7 @@ export default function ServiceLayout({ tag, title, subtitle, description, featu
       <section className="px-6 py-20">
         <div className="max-w-6xl mx-auto">
           <FadeIn className="mb-12">
-            <p className="text-white/40 text-sm tracking-widest uppercase mb-3">¿Qué incluye?</p>
+            <p className="liquid-glass rounded-full inline-block px-3 py-1 text-white/60 text-[10px] tracking-widest uppercase mb-3">¿Qué incluye?</p>
             <h2 className="text-3xl md:text-5xl text-white tracking-tight" style={{ fontFamily: "'Instrument Serif', serif" }}>
               Todo lo que necesitás
             </h2>
@@ -288,7 +288,7 @@ export default function ServiceLayout({ tag, title, subtitle, description, featu
             {features.map((f, i) => (
               <FadeIn key={f.title} delay={i * 0.08} className="h-full">
                 <div className="glass-card rounded-3xl p-6 h-full">
-                  <div className="text-2xl mb-4">{f.icon}</div>
+                  <div className="text-2xl mb-4 text-[#CEF657]">{f.icon}</div>
                   <h3 className="text-white font-medium mb-2 text-base">{f.title}</h3>
                   <p className="text-white/40 text-sm leading-relaxed">{f.desc}</p>
                 </div>
@@ -302,9 +302,9 @@ export default function ServiceLayout({ tag, title, subtitle, description, featu
       <section className="px-6 py-20">
         <div className="max-w-6xl mx-auto">
           <FadeIn className="mb-12">
-            <p className="text-white/40 text-sm tracking-widest uppercase mb-3">Cómo trabajamos</p>
+            <p className="liquid-glass rounded-full inline-block px-3 py-1 text-white/60 text-[10px] tracking-widest uppercase mb-3">Cómo trabajamos</p>
             <h2 className="text-3xl md:text-5xl text-white tracking-tight" style={{ fontFamily: "'Instrument Serif', serif" }}>
-              El proceso, <em className="italic text-white/50">paso a paso</em>
+              El proceso, <em className="italic text-[#0083FE]">paso a paso</em>
             </h2>
           </FadeIn>
 
@@ -322,7 +322,7 @@ export default function ServiceLayout({ tag, title, subtitle, description, featu
                     </h3>
                     <p className="text-white/40 text-sm leading-relaxed">{step.desc}</p>
                   </div>
-                  <div className="text-white/10 text-3xl flex-shrink-0 hidden md:block">{step.icon}</div>
+                  <div className="text-[#CEF657]/80 text-3xl flex-shrink-0 hidden md:block">{step.icon}</div>
                 </div>
               </FadeIn>
             ))}
@@ -335,16 +335,16 @@ export default function ServiceLayout({ tag, title, subtitle, description, featu
         <div className="max-w-6xl mx-auto">
           <FadeIn>
             <div className="glass-card rounded-3xl p-10 md:p-16 text-center">
-              <p className="text-white/40 text-sm tracking-widest uppercase mb-4">¿Listo para empezar?</p>
+              <p className="liquid-glass rounded-full inline-block px-3 py-1 text-white/60 text-[10px] tracking-widest uppercase mb-4">¿Listo para empezar?</p>
               <h2 className="text-4xl md:text-6xl text-white mb-6 tracking-tight" style={{ fontFamily: "'Instrument Serif', serif" }}>
-                Tu diagnóstico es <em className="italic text-white/50">gratis</em>
+                Tu diagnóstico es <em className="italic text-[#0083FE]">gratis</em>
               </h2>
               <p className="text-white/50 text-base max-w-xl mx-auto mb-10">
                 {cta?.ctaDesc ?? "En menos de 48 horas uno de nuestros asesores se comunica con vos para analizar tu caso y diseñar la solución ideal."}
               </p>
               <a
                 href="#contacto"
-                className="inline-flex items-center gap-2 bg-white text-black font-semibold px-8 py-4 rounded-full hover:bg-white/90 transition-all hover:scale-105 text-sm"
+                className="inline-flex items-center gap-2 bg-[#0083FE]/20 border border-[#0083FE]/50 text-white font-semibold px-8 py-4 rounded-full hover:bg-[#0083FE] transition-all hover:scale-105 text-sm"
               >
                 {cta?.ctaButton ?? "Empezar ahora"}
                 <ArrowRight size={16} />

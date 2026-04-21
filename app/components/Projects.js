@@ -68,7 +68,7 @@ export default function Projects() {
         <motion.p
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
-          className="text-white/40 text-sm tracking-widest uppercase mb-6"
+          className="liquid-glass rounded-full inline-block px-3 py-1 text-white/60 text-[10px] tracking-widest uppercase mb-6"
         >
           Nuestro trabajo
         </motion.p>
@@ -82,7 +82,7 @@ export default function Projects() {
             className="text-4xl md:text-6xl text-white tracking-tight"
             style={{ fontFamily: "'Instrument Serif', serif" }}
           >
-            Proyectos <em className="italic text-white/50">realizados</em>
+            Proyectos <em className="italic text-[#0083FE]">realizados</em>
           </h2>
           <span className="text-white/30 text-sm hidden md:block">
             {projects.length} proyectos destacados
@@ -159,7 +159,7 @@ export default function Projects() {
         >
           <a
             href="#contacto"
-            className="liquid-glass rounded-full px-8 py-4 text-white text-sm font-medium hover:bg-white/5 transition-colors flex items-center gap-2"
+            className="liquid-glass rounded-full px-8 py-4 text-white text-sm font-medium hover:bg-[#0083FE]/20 hover:border-[#0083FE]/50 transition-colors flex items-center gap-2"
           >
             ¿Querés ser el próximo proyecto?
             <ArrowUpRight size={16} />

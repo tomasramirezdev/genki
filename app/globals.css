@@ -7,6 +7,9 @@
 }
 
 @theme inline {
+  --color-gk-primary: #CEF657;
+  --color-gk-secondary: #0083FE;
+  --color-gk-dark: #242628;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -28,6 +31,12 @@ html { scroll-behavior: smooth; }
   position: relative;
   overflow: hidden;
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+}
+
+.liquid-glass:hover {
+  background: rgba(0, 131, 254, 0.2);
+  box-shadow: 0 0 0 1px rgba(0, 131, 254, 0.5);
 }
 
 /* Cards — luz celeste viajando por el borde */
@@ -50,13 +59,13 @@ html { scroll-behavior: smooth; }
   transform: translate(-50%, -50%) rotate(0deg);
   background: conic-gradient(
     from 0deg,
-    rgba(116, 172, 223, 0.02) 0deg,
-    rgba(116, 172, 223, 0.02) 50deg,
-    rgba(116, 172, 223, 0.2)  75deg,
-    rgba(116, 172, 223, 0.35) 92deg,
-    rgba(116, 172, 223, 0.2)  109deg,
-    rgba(116, 172, 223, 0.02) 135deg,
-    rgba(116, 172, 223, 0.02) 360deg
+    rgba(206, 246, 87, 0.02) 0deg,
+    rgba(206, 246, 87, 0.02) 50deg,
+    rgba(206, 246, 87, 0.4)  75deg,
+    rgba(206, 246, 87, 0.8) 92deg,
+    rgba(206, 246, 87, 0.4)  109deg,
+    rgba(206, 246, 87, 0.02) 135deg,
+    rgba(206, 246, 87, 0.02) 360deg
   );
   animation: spin-border 12s linear infinite;
   will-change: transform;

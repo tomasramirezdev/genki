@@ -93,20 +93,20 @@ export default function Hero() {
           className="text-5xl sm:text-7xl md:text-8xl lg:text-[10rem] text-white tracking-tight leading-none mb-8"
           style={{ fontFamily: "'Instrument Serif', serif" }}
         >
-          Energía <em className="italic text-white/80">solar.</em>
+          Energía <em className="italic text-[#0083FE]">solar.</em>
         </h1>
 
         <div className="flex flex-col sm:flex-row items-center gap-4 mb-8">
           <a
             href="#contacto"
-            className="bg-white text-black font-semibold text-sm px-8 py-4 rounded-full hover:bg-white/90 transition-all hover:scale-105 flex items-center gap-2"
+            className="bg-[#0083FE]/20 border border-[#0083FE]/50 text-white font-semibold text-sm px-8 py-4 rounded-full hover:bg-[#0083FE] transition-all hover:scale-105 flex items-center gap-2"
           >
             Cotizá gratis
             <ArrowRight size={16} />
           </a>
           <a
             href="#nosotros"
-            className="liquid-glass text-white text-sm px-8 py-4 rounded-full hover:bg-white/5 transition-colors"
+            className="liquid-glass text-white text-sm px-8 py-4 rounded-full transition-colors"
           >
             Conocé más
           </a>
@@ -120,7 +120,7 @@ export default function Hero() {
 
       {/* Bottom tagline */}
       <div className="relative z-10 flex justify-center pb-10">
-        <button className="liquid-glass rounded-full px-8 py-3 text-white/70 text-sm font-medium hover:bg-white/5 transition-colors">
+        <button className="liquid-glass rounded-full px-8 py-3 text-white/70 text-sm font-medium hover:text-white transition-colors">
           Córdoba · Argentina · +300 días de sol al año
         </button>
       </div>

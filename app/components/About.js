@@ -16,13 +16,13 @@ export default function About() {
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.7 }}
           >
-            <p className="text-white/40 text-sm tracking-widest uppercase mb-6">¿Quiénes somos?</p>
+            <p className="liquid-glass rounded-full inline-block px-3 py-1 text-white/60 text-[10px] tracking-widest uppercase mb-6">¿Quiénes somos?</p>
             <h2
               className="text-4xl md:text-5xl lg:text-6xl text-white tracking-tight leading-[1.1]"
               style={{ fontFamily: "'Instrument Serif', serif" }}
             >
               Pioneros en{" "}
-              <em className="italic text-white/50">energía renovable</em>{" "}
+              <em className="italic text-[#0083FE]">energía renovable</em>{" "}
               para Córdoba.
             </h2>
           </motion.div>
@@ -43,7 +43,7 @@ export default function About() {
             </p>
             <a
               href="#contacto"
-              className="liquid-glass self-start rounded-full px-6 py-3 text-white text-sm font-medium hover:bg-white/5 transition-colors"
+              className="liquid-glass self-start rounded-full px-6 py-3 text-white text-sm font-medium hover:bg-gk-primary hover:border-gk-primary transition-colors"
             >
               Conocé más →
             </a>

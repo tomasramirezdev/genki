@@ -17,7 +17,7 @@ export default function Philosophy() {
           style={{ fontFamily: "'Instrument Serif', serif" }}
         >
           Sustentabilidad{" "}
-          <em className="italic text-white/40">×</em>{" "}
+          <em className="italic text-[#0083FE]">×</em>{" "}
           Tecnología
         </motion.h2>
 
@@ -45,7 +45,7 @@ export default function Philosophy() {
             className="flex flex-col gap-8"
           >
             <div>
-              <p className="text-white/40 text-xs tracking-widest uppercase mb-4">
+              <p className="liquid-glass rounded-full inline-block px-3 py-1 text-white/60 text-xs tracking-widest uppercase mb-4">
                 Nuestra visión
               </p>
               <p className="text-white/70 text-base md:text-lg leading-relaxed">
@@ -58,7 +58,7 @@ export default function Philosophy() {
             <div className="w-full h-px bg-white/10" />
 
             <div>
-              <p className="text-white/40 text-xs tracking-widest uppercase mb-4">
+              <p className="liquid-glass rounded-full inline-block px-3 py-1 text-white/60 text-xs tracking-widest uppercase mb-4">
                 Nuestro compromiso
               </p>
               <p className="text-white/70 text-base md:text-lg leading-relaxed">

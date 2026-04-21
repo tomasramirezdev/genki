@@ -55,7 +55,7 @@ export default function Contact() {
         <motion.p
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
-          className="text-white/40 text-sm tracking-widest uppercase mb-6"
+          className="liquid-glass rounded-full inline-block px-3 py-1 text-white/60 text-[10px] tracking-widest uppercase mb-6"
         >
           Contacto
         </motion.p>
@@ -67,7 +67,7 @@ export default function Contact() {
           style={{ fontFamily: "'Instrument Serif', serif" }}
         >
           Empezá a ahorrar{" "}
-          <em className="italic text-white/60">desde hoy</em>
+          <em className="italic text-[#0083FE]">desde hoy</em>
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
@@ -149,7 +149,7 @@ export default function Contact() {
                 />
                 <button
                   type="submit"
-                  className="liquid-glass rounded-full px-6 py-3.5 text-white text-sm font-medium flex items-center justify-center gap-2 hover:bg-white/5 transition-colors mt-2"
+                  className="liquid-glass rounded-full px-6 py-3.5 text-white text-sm font-medium flex items-center justify-center gap-2 hover:bg-gk-primary hover:border-gk-primary transition-colors mt-2"
                 >
                   Solicitar diagnóstico gratuito
                   <ArrowRight size={16} />
