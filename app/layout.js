@@ -4,9 +4,13 @@ import "./globals.css";
 const geist = Geist({ subsets: ["latin"], variable: "--font-geist-sans" });
 
 export const metadata = {
-  title: "Genki – Energía Solar en Córdoba, Argentina",
+  title: "Genkidama – Energía Solar en Córdoba, Argentina",
   description:
     "Instalamos paneles solares de última generación en Córdoba, Argentina. Energía limpia y eficiente para hogares y empresas.",
+  icons: {
+    icon: "/isoblanco.png",
+    apple: "/isoblanco.png",
+  },
 };
 
 export default function RootLayout({ children }) {

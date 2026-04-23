@@ -139,10 +139,10 @@ export default function Navbar() {
           </a>
           <a
             href={href("contacto")}
-            className="liquid-glass rounded-full px-5 py-2 text-white text-sm font-medium hover:text-white hover:bg-[#0083FE]/20 hover:border-[#0083FE]/50 transition-colors border border-white/10"
-            style={{ backdropFilter: "none", WebkitBackdropFilter: "none" }}
+            className="rounded-full px-5 py-2 text-white text-sm font-medium transition-all bg-white/[0.02] shadow-[0_0_0_1px_rgba(255,255,255,0.08)] hover:bg-[#CEF657]/20 hover:shadow-[0_0_0_1px_rgba(206,246,87,0.5)]"
+            style={{ backdropFilter: "blur(6px)", WebkitBackdropFilter: "blur(6px)" }}
           >
-            Cotizá Gratis
+            Contactanos
           </a>
           <button
             className="md:hidden text-white p-2"
@@ -183,7 +183,7 @@ export default function Navbar() {
             onClick={() => setMobileOpen(false)}
             className="bg-white text-black text-sm font-semibold px-5 py-2.5 rounded-full text-center mt-2"
           >
-            Cotizá Gratis
+            Contactanos
           </a>
         </div>
       )}

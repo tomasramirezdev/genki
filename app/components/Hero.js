@@ -96,25 +96,26 @@ export default function Hero() {
           Energía <em className="italic text-[#0083FE]">solar.</em>
         </h1>
 
-        <div className="flex flex-col sm:flex-row items-center gap-4 mb-8">
+        <div className="flex flex-row items-center gap-3 mb-8">
           <a
             href="#contacto"
-            className="bg-[#0083FE]/20 border border-[#0083FE]/50 text-white font-semibold text-sm px-8 py-4 rounded-full hover:bg-[#0083FE] transition-all hover:scale-105 flex items-center gap-2"
+            className="bg-[#0083FE] text-white font-semibold text-sm px-6 py-3 md:px-8 md:py-4 rounded-full hover:opacity-90 transition-all flex items-center gap-2 whitespace-nowrap"
           >
-            Cotizá gratis
+            Contactanos
             <ArrowRight size={16} />
           </a>
           <a
             href="#nosotros"
-            className="liquid-glass text-white text-sm px-8 py-4 rounded-full transition-colors"
+            className="text-white text-sm px-6 py-3 md:px-8 md:py-4 rounded-full transition-all bg-white/[0.02] shadow-[0_0_0_1px_rgba(255,255,255,0.08)] hover:bg-[#CEF657]/20 hover:shadow-[0_0_0_1px_rgba(206,246,87,0.5)] whitespace-nowrap"
+            style={{ backdropFilter: "blur(6px)", WebkitBackdropFilter: "blur(6px)" }}
           >
             Conocé más
           </a>
         </div>
 
         <p className="text-white/50 text-sm leading-relaxed max-w-sm font-light tracking-wide">
-          Instalamos sistemas solares de última generación en Córdoba, Argentina.
-          Ahorrá en tu factura y cuidá el planeta.
+          Más de 500 hogares y empresas en Córdoba ya generan su propia energía.
+          El tuyo puede ser el próximo.
         </p>
       </div>
 

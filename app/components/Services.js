@@ -62,27 +62,68 @@ export default function Services() {
               transition={{ duration: 0.8, delay: i * 0.15 }}
               className="glass-card rounded-3xl overflow-hidden group cursor-pointer h-full"
             >
-              {/* Visual area */}
-              <div className="aspect-video relative overflow-hidden bg-white/[0.03]">
-                {/* Solar panel grid — CSS only */}
+              {/* Visual area — margen para que el borde del glass-card sea visible */}
+              <div
+                className="relative overflow-hidden"
+                style={{
+                  margin: "1.5px 1.5px 0",
+                  aspectRatio: "16/9",
+                  borderRadius: "22px 22px 0 0",
+                  backgroundColor: "#07111f",
+                }}
+              >
+
+                {/* Celdas internas — grilla fina (6×10 por panel) */}
                 <div
-                  className="absolute inset-0 opacity-[0.07] group-hover:opacity-[0.35] transition-opacity duration-500"
+                  className="absolute inset-0 opacity-50 group-hover:opacity-100 transition-opacity duration-500"
                   style={{
-                    backgroundColor: "rgba(116,172,223,0.6)",
-                    backgroundImage:
-                      "linear-gradient(#080808 2px, transparent 2px), linear-gradient(90deg, #080808 2px, transparent 2px)",
-                    backgroundSize: "12.5% 20%",
+                    backgroundImage: [
+                      "linear-gradient(rgba(0,131,254,0.6) 1px, transparent 1px)",
+                      "linear-gradient(90deg, rgba(0,131,254,0.6) 1px, transparent 1px)",
+                    ].join(", "),
+                    backgroundSize: "4.167% 5%",
                   }}
                 />
+
+                {/* Marco de paneles — grilla gruesa (4×2) */}
+                <div
+                  className="absolute inset-0"
+                  style={{
+                    backgroundImage: [
+                      "linear-gradient(rgba(0,5,18,1) 4px, transparent 4px)",
+                      "linear-gradient(90deg, rgba(0,5,18,1) 4px, transparent 4px)",
+                    ].join(", "),
+                    backgroundSize: "25% 50%",
+                  }}
+                />
+
+                {/* Brillo superficial — simula el vidrio del panel */}
+                <div
+                  className="absolute inset-0 opacity-10 group-hover:opacity-60 transition-opacity duration-500"
+                  style={{
+                    background: "linear-gradient(135deg, rgba(0,131,254,0.8) 0%, transparent 50%, rgba(0,40,120,0.3) 100%)",
+                  }}
+                />
+
+                {/* Flash de luz en hover */}
+                <div
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  style={{
+                    background: "radial-gradient(ellipse at 30% 40%, rgba(0,131,254,0.25) 0%, transparent 60%)",
+                  }}
+                />
+
+                {/* Icono */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div
-                    className="text-8xl text-white/10 group-hover:text-white/50 transition-colors duration-500 select-none"
+                    className="text-8xl text-white/10 group-hover:text-white transition-colors duration-500 select-none"
                     style={{ fontFamily: "'Instrument Serif', serif" }}
                   >
                     {["☀", "⚡", "📡", "🔍"][i]}
                   </div>
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
               </div>
 
               {/* Body */}

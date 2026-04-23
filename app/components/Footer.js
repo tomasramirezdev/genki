@@ -1,6 +1,5 @@
 "use client";
-import { useState } from "react";
-import { Sun, ArrowRight, Share2, MessageCircle, Globe } from "lucide-react";
+import { ArrowRight, Share2, MessageCircle, Globe } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -23,49 +22,38 @@ const companyLinks = [
   { label: "Quiénes somos",  href: "/#nosotros" },
   { label: "Proyectos",      href: "/#proyectos" },
   { label: "Testimonios",    href: "/#testimonios" },
-  { label: "Cotizá gratis",  href: "/#contacto" },
+  { label: "Contacto",  href: "/#contacto" },
 ];
 
 export default function Footer() {
-  const [email, setEmail] = useState("");
-  const [subscribed, setSubscribed] = useState(false);
-
-  const handleSubscribe = (e) => {
-    e.preventDefault();
-    if (email) setSubscribed(true);
-  };
-
   return (
-    <footer className="bg-black border-t border-white/10">
-      {/* Newsletter */}
-      <div className="max-w-6xl mx-auto px-6 py-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 border-b border-white/10">
-        <div>
-          <h3 className="text-2xl text-white mb-1" style={{ fontFamily: "'Instrument Serif', serif" }}>
-            Suscribite al newsletter
-          </h3>
-          <p className="text-white/40 text-sm">Novedades sobre energía solar, subsidios y tecnología renovable.</p>
+    <footer className="bg-black">
+
+      {/* CTA franja */}
+      <div
+        className="px-6 py-20 md:py-28"
+        style={{ backgroundColor: "#0f0f0f" }}
+      >
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-start md:items-end justify-between gap-8">
+          <h2
+            className="text-4xl md:text-6xl lg:text-7xl text-white tracking-tight leading-tight max-w-xl"
+            style={{ fontFamily: "'Instrument Serif', serif" }}
+          >
+            ¿Listo para dejar de pagarle a EPEC?
+          </h2>
+          <a
+            href="/#contacto"
+            className="flex-shrink-0 flex items-center gap-2 text-black text-sm font-semibold px-8 py-4 rounded-full hover:opacity-90 transition-opacity"
+            style={{ backgroundColor: "#CEF657" }}
+          >
+            Contactanos
+            <ArrowRight size={16} />
+          </a>
         </div>
-        {subscribed ? (
-          <p className="text-white/60 text-sm">¡Gracias por suscribirte!</p>
-        ) : (
-          <form onSubmit={handleSubscribe} className="flex gap-2 w-full md:w-auto">
-            <input
-              type="email"
-              required
-              placeholder="tu@email.com"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="bg-white/5 border border-white/10 rounded-full px-5 py-3 text-white placeholder:text-white/30 text-sm focus:outline-none focus:border-white/30 transition-colors flex-1 md:w-56"
-            />
-            <button type="submit" className="liquid-glass rounded-full p-3 text-white hover:bg-gk-primary hover:border-gk-primary transition-colors flex-shrink-0">
-              <ArrowRight size={18} />
-            </button>
-          </form>
-        )}
       </div>
 
-      {/* Main */}
-      <div className="max-w-6xl mx-auto px-6 py-16 grid grid-cols-2 md:grid-cols-4 gap-10">
+      {/* Links + brand */}
+      <div className="border-t border-white/10 max-w-6xl mx-auto px-6 py-16 grid grid-cols-2 md:grid-cols-4 gap-10">
         {/* Brand */}
         <div className="col-span-2 md:col-span-1">
           <Link href="/" className="flex items-center gap-2 mb-4">
@@ -76,7 +64,7 @@ export default function Footer() {
           </p>
           <div className="flex gap-3">
             {[Share2, MessageCircle, Globe].map((Icon, i) => (
-              <a key={i} href="#" className="liquid-glass rounded-full p-3 text-white/60 hover:text-white hover:bg-gk-primary hover:border-gk-primary transition-all">
+              <a key={i} href="#" className="liquid-glass rounded-full p-3 text-white/60 hover:text-white transition-all">
                 <Icon size={18} />
               </a>
             ))}
@@ -128,9 +116,10 @@ export default function Footer() {
 
       {/* Bottom */}
       <div className="border-t border-white/10 max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
-        <p className="text-white/20 text-xs">© 2024 Genki. Todos los derechos reservados.</p>
+        <p className="text-white/20 text-xs">© 2025 Genkidama. Todos los derechos reservados.</p>
         <p className="text-white/20 text-xs">Av. Colón 1234, Nueva Córdoba · +54 351 000-0000</p>
       </div>
+
     </footer>
   );
 }

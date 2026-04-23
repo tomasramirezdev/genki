@@ -51,10 +51,10 @@ const projects = [
 ];
 
 const typeColors = {
-  Residencial: "text-blue-300",
-  Industrial: "text-orange-300",
-  Rural: "text-green-300",
-  Comercial: "text-purple-300",
+  Residencial: "text-[#0083FE]",
+  Industrial:  "text-[#CEF657]",
+  Rural:       "text-[#CEF657]",
+  Comercial:   "text-[#0083FE]",
 };
 
 export default function Projects() {
@@ -65,17 +65,9 @@ export default function Projects() {
   return (
     <section id="proyectos" ref={ref} className="bg-black py-28 md:py-40 px-6 overflow-hidden">
       <div className="max-w-6xl mx-auto">
-        <motion.p
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.6 }}
-          className="liquid-glass rounded-full inline-block px-3 py-1 text-white/60 text-[10px] tracking-widest uppercase mb-6"
-        >
-          Nuestro trabajo
-        </motion.p>
-
         <motion.div
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
-          transition={{ duration: 0.8, delay: 0.1 }}
+          transition={{ duration: 0.8 }}
           className="flex items-end justify-between mb-16"
         >
           <h2
@@ -84,8 +76,8 @@ export default function Projects() {
           >
             Proyectos <em className="italic text-[#0083FE]">realizados</em>
           </h2>
-          <span className="text-white/30 text-sm hidden md:block">
-            {projects.length} proyectos destacados
+          <span className="text-white/25 text-xs tracking-widest uppercase hidden md:block">
+            {projects.length} casos destacados
           </span>
         </motion.div>
 

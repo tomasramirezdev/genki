@@ -2,6 +2,12 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
+const stats = [
+  { value: "+500", label: "Instalaciones", sub: "en Córdoba y provincia" },
+  { value: "10 años", label: "De experiencia", sub: "en el mercado solar argentino" },
+  { value: "98%", label: "Satisfacción", sub: "en nuestros clientes" },
+];
+
 export default function About() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
@@ -10,13 +16,16 @@ export default function About() {
     <section id="nosotros" ref={ref} className="bg-black pt-28 md:pt-40 pb-16 md:pb-20 px-6 overflow-hidden">
       <div className="max-w-6xl mx-auto">
 
-        {/* Top row: label + descripción */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 mb-20 md:mb-28">
+        {/* Top row */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 mb-16 md:mb-20">
           <motion.div
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.7 }}
           >
-            <p className="liquid-glass rounded-full inline-block px-3 py-1 text-white/60 text-[10px] tracking-widest uppercase mb-6">¿Quiénes somos?</p>
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-5 h-px" style={{ backgroundColor: "#CEF657" }} />
+              <span className="text-[10px] tracking-widest uppercase text-white/35">Quiénes somos</span>
+            </div>
             <h2
               className="text-4xl md:text-5xl lg:text-6xl text-white tracking-tight leading-[1.1]"
               style={{ fontFamily: "'Instrument Serif', serif" }}
@@ -43,42 +52,34 @@ export default function About() {
             </p>
             <a
               href="#contacto"
-              className="liquid-glass self-start rounded-full px-6 py-3 text-white text-sm font-medium hover:bg-gk-primary hover:border-gk-primary transition-colors"
+              className="liquid-glass self-start rounded-full px-6 py-3 text-white text-sm font-medium transition-colors"
             >
               Conocé más →
             </a>
           </motion.div>
         </div>
 
-        {/* Stats row */}
-        <motion.div
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="grid grid-cols-1 md:grid-cols-3"
-        >
-          {[
-            { value: "+500", label: "Instalaciones", sub: "en Córdoba y provincia" },
-            { value: "10 años", label: "De experiencia", sub: "en el mercado solar argentino" },
-            { value: "98%", label: "Satisfacción", sub: "en nuestros clientes" },
-          ].map((s, i) => (
-            <div
+        {/* Stats — tiles oscuros sin animación de borde */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+          {stats.map((s, i) => (
+            <motion.div
               key={s.label}
-              className={`py-10 px-8 flex flex-col gap-1 glass-card
-                ${i < 2 ? "md:border-r md:border-white/10" : ""}
-                ${i > 0 ? "border-t border-white/10 md:border-t-0" : ""}
-              `}
+              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.6, delay: 0.3 + i * 0.08 }}
+              className="rounded-2xl px-8 py-7"
+              style={{ backgroundColor: "#111111" }}
             >
-              <div
+              <p
                 className="text-5xl md:text-6xl text-white mb-2"
                 style={{ fontFamily: "'Instrument Serif', serif" }}
               >
                 {s.value}
-              </div>
-              <div className="text-white text-sm font-medium">{s.label}</div>
-              <div className="text-white/30 text-xs">{s.sub}</div>
-            </div>
+              </p>
+              <p className="text-white text-sm font-medium mb-0.5">{s.label}</p>
+              <p className="text-white/30 text-xs">{s.sub}</p>
+            </motion.div>
           ))}
-        </motion.div>
+        </div>
 
       </div>
     </section>
